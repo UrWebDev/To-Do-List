@@ -12,15 +12,14 @@ btn.addEventListener('click', e => {
     input.value = ""
     arr.push(lists)
 
-    // Clear the div before adding new elements
     div.textContent = ""
     for (let i = 0; i < arr.length; i++) {
         const element = arr[i];
 
-        // Create a new checkbox element
+       
         const checkbox = document.createElement('input')
         checkbox.type = 'checkbox'
-        // Create a new label element
+      
         const label = document.createElement('label')
         label.textContent = element
         
@@ -34,7 +33,7 @@ btn.addEventListener('click', e => {
         editBtn.style.display = 'none'
         editBtn.classList.add('edit-btn')
         
-        // Create a new div to hold checkbox and label
+        
         const itemDiv = document.createElement('div')
         itemDiv.style.display = 'flex'
         itemDiv.classList.add('todo-item')
@@ -45,7 +44,7 @@ btn.addEventListener('click', e => {
         
         
         
-        // Append the div to the main div
+        
         div.appendChild(itemDiv)
 
         checkbox.addEventListener('click', () => {
@@ -94,30 +93,3 @@ input.addEventListener("keyup", () => {
         btn.disabled = true;
     }
 });
-
-// const input = document.getElementById('input')
-// const btn = document.getElementById('button')
-// const div = document.getElementById('div')
-
-// let arr = []
-
-// btn.addEventListener('click', e => {
-//     e.preventDefault()
-//     const lists = input.value
-//     input.value = ""
-//     arr.push(lists)
-
-//     // Clear the div before adding new elements
-//     div.innerHTML = ""
-
-//     for (let i = 0; i < arr.length; i++) {
-//         const element = arr[i];
-        
-//         // Create a new paragraph element for each item
-//         const paragraph = document.createElement('p')
-//         paragraph.textContent = element
-
-//         // Append the paragraph element to the div
-//         div.appendChild(paragraph)
-//     }
-// })
